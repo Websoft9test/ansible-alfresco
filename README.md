@@ -1,13 +1,13 @@
-# BT 自动化安装与部署
+# Alfresco 自动化安装与部署
 
-本项目是由 [Websoft9](http://www.websoft9.com) 研发的 [Alfresco](https://docs.alfresco.com/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 BT，让原本复杂的安装过程变得没有任何技术门槛。  
+本项目是由 [Websoft9](http://www.websoft9.com) 研发的 [Alfresco](https://docs.alfresco.com/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Alfresco，让原本复杂的安装过程变得没有任何技术门槛。  
 
 本项目是开源项目，采用 LGPL3.0 开源协议。
 
 ## 配置要求
 
 操作系统：目支持 CentOS7.x, Ubuntu, Debian 以上部署此脚本，确保是干净的操作系统，没有安装过其它环境带的Apache/Nginx/php/MySQL 
-硬件配置：最低1核4G，40G系统盘空间，否则无法运行
+硬件配置：最低2核4G，40G系统盘空间，否则无法运行
 
 ## 组件
 
@@ -17,7 +17,7 @@
 
 ## 本项目安装的是 Alfresco 最新版吗？
 
-本项目采用官方提供的安装脚本进行安装，官方会在安装脚本中对宝塔的版本进行控制，即每一次安装均可保证为 BT 官方发布的最新稳定版。
+本项目采用官方提供的安装脚本进行安装，官方会在安装脚本中对宝塔的版本进行控制，即每一次安装均可保证为 Alfresco 官方发布的最新稳定版。
 
 我们会定期检查安装脚本 URL 地址的准确性，以保证用户可以顺利安装。
 
@@ -30,7 +30,7 @@
 sudo su -
 
 #自动化安装命令
-wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=bt url=https://github.com/Websoft9/ansible-bt.git init=0 ansible=y
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=Alfresco url=https://github.com/Websoft9/ansible-Alfresco.git init=0 ansible=y
 
 ```
 
