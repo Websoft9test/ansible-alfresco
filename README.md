@@ -1,25 +1,27 @@
 # Alfresco 自动化安装与部署
 
-本项目是由 [Websoft9](http://www.websoft9.com) 研发的 [Alfresco](https://docs.alfresco.com/) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Alfresco，让原本复杂的安装过程变得没有任何技术门槛。  
+本项目是由 [Websoft9](http://www.websoft9.com) 研发的 [Alfresco](https://www.alfresco.com) 自动化安装程序，开发语言是 Ansible。使用本项目，只需要用户在 Linux 上运行一条命令，即可自动化安装 Alfresco，让原本复杂的安装过程变得没有任何技术门槛。  
 
 本项目是开源项目，采用 LGPL3.0 开源协议。
 
 ## 配置要求
 
-操作系统：目支持 CentOS7.x, Ubuntu, Debian 以上部署此脚本，确保是干净的操作系统，没有安装过其它环境带的Apache/Nginx/php/MySQL 
+操作系统：目支持 CentOS7.x, Ubuntu, Debian 以上部署此脚本，确保是干净的操作系统   
 硬件配置：最低2核4G，40G系统盘空间，否则无法运行
+
+更多要求，请参考官方文档：[Alfresco Community Edition](https://www.alfresco.com/thank-you/thank-you-downloading-alfresco-community-edition)
 
 ## 组件
 
-包含的核心组件为：docker(包含：alfresco-share，alfresco-libreoffice, alfresco-content-repository-community, acs-community-ngnixpostgresql, alfresco-activemq, alfresco-transform-misc, alfresco-search-services, alfresco-pdf-renderer等 11 个 docker 容器)
+包含的核心组件为：docker(包含：alfresco-share，alfresco-libreoffice, alfresco-content-repository-community, acs-community-ngnixpostgresql, alfresco-activemq, alfresco-transform-misc, alfresco-search-services, alfresco-pdf-renderer等 11 个 docker 容器)  
 
 更多请见[参数表](/docs/zh/stack-components.md)
 
 ## 本项目安装的是 Alfresco 最新版吗？
 
-本项目采用官方提供的安装脚本进行安装，官方会在安装脚本中对宝塔的版本进行控制，即每一次安装均可保证为 Alfresco 官方发布的最新稳定版。
+本项目采用官方Docker镜像安装，官方会定期维护期Docker，即每一次安装均可保证为 Alfresco 官方发布的最新稳定版。
 
-我们会定期检查安装脚本 URL 地址的准确性，以保证用户可以顺利安装。
+我们会定期测试可用性，以保证用户可以顺利安装。
 
 ## 安装指南
 
@@ -30,7 +32,7 @@
 sudo su -
 
 #自动化安装命令
-wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=Alfresco url=https://github.com/Websoft9/ansible-Alfresco.git init=0 ansible=y
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=alfresco url=https://github.com/Websoft9/ansible-alfresco.git init=0 ansible=y
 
 ```
 
@@ -42,7 +44,7 @@ wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/i
 
 ## 文档
 
-文档链接：https://support.websoft9.com/docs/Alfresco
+文档链接：https://support.websoft9.com/docs/alfresco
 
 ## FAQ
 
