@@ -1,5 +1,5 @@
 # 服务器前置任务(ubuntu使用 Centos项目注释或删掉)
-- name: main
+- name: Pre_Alfresco
   hosts: all
   become: yes
   become_method: sudo
@@ -11,19 +11,17 @@
   
 # 核心任务
 
-- name: main
+- name: Alfresco
   hosts: all
   become: yes
   become_method: sudo
+  gather_facts: True
   vars_files:
     - variables.yml
-
-  vars:
-    mysql_users: wordpress
 
   roles:
     - {role: common, tags: "common"}
     - {role: cloud, tags: "cloud"}
     - {role: docker, tags: "docker"}
-    - {role: docker_alfresco, tags: "docker_alfresco"}
-    # - {role: end, tags: "end"}
+    - {role: alfresco, tags: "alfresco"}
+    - {role: end, tags: "end"}
