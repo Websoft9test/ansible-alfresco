@@ -1,14 +1,3 @@
-# 服务器前置任务(ubuntu使用 Centos项目注释或删掉)
-- name: Pre_Alfresco
-  hosts: all
-  become: yes
-  become_method: sudo
-  gather_facts: False
-  pre_tasks:
-    - name: Install Python
-      raw: sudo apt update && sudo apt-get -y install python
-      ignore_errors: yes
-  
 # 核心任务
 
 - name: Alfresco
@@ -17,11 +6,12 @@
   become_method: sudo
   gather_facts: True
   vars_files:
-    - variables.yml
+    - /vars/mian.yml
 
   roles:
-    - {role: common, tags: "common"}
-    - {role: cloud, tags: "cloud"}
-    - {role: docker, tags: "docker"}
+    - {role: role_common, tags: "role_common"}
+    - {role: role_cloud, tags: "role_cloud"}
+    - {role: role_docker, tags: "role_docker"}
     - {role: alfresco, tags: "alfresco"}
-    - {role: end, tags: "end"}
+    - {role: role_preend, tags: "role_preend"}
+    - {role: role_end, tags: "role_end"}

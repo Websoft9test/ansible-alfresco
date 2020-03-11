@@ -6,14 +6,10 @@
 
 ## 配置要求
 
-安装本项目，确保符合如下的条件：
+操作系统：目支持 CentOS7.x, Ubuntu, Debian 以上部署此脚本，确保是干净的操作系统   
+硬件配置：最低2核4G，40G系统盘空间，否则无法运行
 
-| 条件       | 详情       | 备注  |
-| ------------ | ------------ | ----- |
-| 操作系统       | CentOS7.x, Ubuntu18.04, Amazon Linux2       |    |
-| 公有云| AWS, Azure, 阿里云, 华为云, 腾讯云 |  |
-| 私有云|  KVM, VMware, VirtualBox, OpenStack |  |
-| 服务器配置 | 最低1核1G，安装时所需的带宽不低于10M |  建议采用按量100M带宽 |
+更多要求，请参考官方文档：[Alfresco Community Edition](https://www.alfresco.com/thank-you/thank-you-downloading-alfresco-community-edition)
 
 ## 组件
 
@@ -36,20 +32,19 @@
 sudo su -
 
 #自动化安装命令
-wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.sh ; bash install.sh repository=alfresco
+wget -N https://raw.githubusercontent.com/Websoft9/linux/master/ansible_script/install.py ; python install.py playb=alfresco url=https://github.com/Websoft9/ansible-alfresco.git init=0 ansible=y
 
 ```
 
 注意：  
 
-1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
-2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
-多种原因导致无法顺利安装，请使用我们在公有云上发布的 [Alfresco 镜像](https://apps.websoft9.com/Alfresco) 的部署方式
+1. 自动化脚本需服务器上已经安装 Python 2.7 或以上版本方可运行，一般操作系统会自带 Python。如果无法运行，系统会提示用户先安装 Python，再运行自动化安装命令。
+2. 由于自动化安装过程中有大量下载任务，若网络不通（或速度太慢）会引起下载失败，从而导致安装程序终止运行。此时，请重置服务器后再次尝试安装，若仍然无法完成，请使用我们在公有云上发布的 [Alfresco 镜像](https://apps.websoft9.com/Alfresco) 的部署方式
 
 
 ## 文档
 
-文档链接：https://support.websoft9.com/docs/alfresco/zh
+文档链接：https://support.websoft9.com/docs/alfresco
 
 ## FAQ
 
