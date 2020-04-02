@@ -29,12 +29,9 @@
 
 ## 安装指南
 
-登录 Linux，运行下面的**命令脚本**即可启动自动化部署，然后耐心等待，直至安装成功。
+以 root 用户登录 Linux，运行下面的**一键自动化安装命令**即可启动自动化部署。若没有 root 用户，请以其他用户登录 Linux 后运行 `sudo su -` 命令提升为 root 权限，然后再运行下面的脚本。
 
 ```
-#非 root 用户登录后，需先提升成为 root 权限
-sudo su -
-
 #自动化安装命令
 wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/master/scripts/install.sh; bash install.sh -r alfresco
 
@@ -43,7 +40,8 @@ wget -N https://raw.githubusercontent.com/Websoft9/ansible-linux/master/scripts/
 注意：  
 
 1. 操作不慎或网络发生变化，可能会导致SSH连接被中断，安装就会失败，此时请重新安装
-2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装
+2. 安装缓慢、停滞不前或无故中断，主要是网络不通（或网速太慢）导致的下载问题，此时请重新安装  
+
 多种原因导致无法顺利安装，请使用我们在公有云上发布的 [Alfresco 镜像](https://apps.websoft9.com/Alfresco) 的部署方式
 
 
