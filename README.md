@@ -23,7 +23,7 @@
 
 ## 本项目安装的是 Alfresco 最新版吗？
 
-本项目采用官方Docker镜像安装，官方会定期维护期Docker，即每一次安装均可保证为 Alfresco 官方发布的最新稳定版。
+本项目采用官方[Docker镜像](https://github.com/Alfresco/acs-community-deployment/blob/master/docker-compose/docker-compose.yml)安装，官方会定期维护期Docker，即每一次安装均可保证为 Alfresco 官方发布的最新稳定版。
 
 我们会定期测试可用性，以保证用户可以顺利安装。
 
