@@ -7,9 +7,7 @@ mysql_databases:
   state:
   
 mysql_users: 
-  name: websoft9
-  host:
-  password: 
+  name: websoft9 
   priv: 'test_a.*:ALL,GRANT'
 
 initdb_vars:
