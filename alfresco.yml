@@ -6,7 +6,7 @@
   become_method: sudo
   gather_facts: True
   vars_files:
-    - /vars/mian.yml
+    - vars/main.yml
 
   roles:
     - {role: role_common, tags: "role_common"}
