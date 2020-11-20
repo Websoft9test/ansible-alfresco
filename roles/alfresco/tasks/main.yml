@@ -22,7 +22,8 @@
     mode: 0644
 
 - name: run docker-compose
-  docker_compose:
-    project_src: "{{project_src}}/docker-compose" 
+  shell: |
+    docker-compose up -d
+    sleep 300
 
     
