@@ -1,9 +1,3 @@
----
-# - name: download latest docker-compose file
-#   git:
-#     repo: "{{git_url}}"
-#     dest: "{{project_src}}"
-
 - name: create directory
   file:
     path: "{{item}}"
